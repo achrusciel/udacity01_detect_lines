@@ -40,13 +40,13 @@ When the lines are continuous there was no need for improvement. But when the li
 4) In case no line information is available for a given image, no line will be drawn
 
 
-###3. Identify potential shortcomings with your current pipeline
+### 3. Identify potential shortcomings with your current pipeline
 
 1) My extrapolation logic in the draw_lines()-method requires an adjustment parameter, which increases the calculated slope for the final lines (current value = 2.0). This is required at this moment as the calculation of the lower left (lower right) x-values is too high (too small).
 2) The pipeline works at this moment only with the provided test data. Different kind of streets or different colors (e.g. at night) need to be testet as well.
 3) In case an image does not provide a line information, the drawing of lines is omitted. A heuristic might be necessary to use historical information and assume a line as long as the incoming images do not provide new line information.
 
-###4. Suggest possible improvements to your pipeline
+### 4. Suggest possible improvements to your pipeline
 
 1) The calculation of the extrapolation could be improved in order to remove the introduced adjustment parameter. Maybe some APIs in cv2 exist which could support.
 See image below. On the right lower side of the image the calculated line does not fill well the whole line. In the videos this leads sometimes to jumping lines.
